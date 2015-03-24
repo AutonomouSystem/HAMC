@@ -64,10 +64,10 @@ def dialoge():
             print(main_menu_string)
             choice = input('Enter number of choice:')
             try:
-                int(choice)
-                action = choices.get(choice)
-                if action:
-                    action()
+                if choice.isnumer():
+                    action = choices.get(choice)
+                    if action:
+                        action()
                 else:
                     print("{0} is not a valid choice".format(choice))
             except ValueError:
